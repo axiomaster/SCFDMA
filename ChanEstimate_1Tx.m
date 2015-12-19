@@ -2,7 +2,7 @@ function hD = ChanEstimate_1Tx(csrRx, Ref, sim_param)
 %#codegen
 % Assume same number of Tx and Rx antennas = 1
 % Initialize output buffer
-hD = complex(zeros(sim_param.M, 14-sim_param.N_pilot, sim_param.Rx));
+hD = complex(zeros(sim_param.M, 14-sim_param.N_pilot-1, sim_param.Rx));
 % Estimate channel based on CSR - per antenna port
 % csrRx = reshape(Rx, numel(Rx)/4, 4); % Align received pilots with reference pilots
 for i=1:sim_param.Rx

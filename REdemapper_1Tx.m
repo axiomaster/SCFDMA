@@ -4,7 +4,7 @@ M = sim_param.M;
 N_pilot = sim_param.N_pilot;
 
 rx = sim_param.Rx;
-data = complex(zeros(M, 14-N_pilot, rx));
+data = complex(zeros(M, 14-N_pilot-1, rx));
 csr = complex(zeros(M,N_pilot, rx));
 dataIn=zeros(M,14,rx);
 %% Ñ­»·ÒÆÎ»
@@ -20,7 +20,7 @@ switch N_pilot
         csr(:,1,:) = dataIn(:,4,:);
         data(:,4:9,:) = dataIn(:,5:10,:);
         csr(:,2,:) = dataIn(:,11,:);
-        data(:,10:12,:) = dataIn(:,12:14,:);
+        data(:,10:11,:) = dataIn(:,12:13,:);
     case 4
         switch sim_param.mapper_type
             case 1,%3,6,9,12  
