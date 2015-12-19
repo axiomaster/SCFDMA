@@ -21,7 +21,7 @@ dftOut = DFT(modOut, sim_param.M, sim_param.N_pilot);
 csr_ref = CSRgenerator(sim_param.M, sim_param.N_pilot);
 % load('csr_ref.mat');
 %% 映射
-mapperOut = REmapper_1Tx(dftOut, csr_ref);
+mapperOut = REmapper_1Tx(dftOut, csr_ref, sim_param.mapper_type);
 %% OFMD发射
 ofdmTxOut = OFDMTx(mapperOut, sim_param);
 % % ---------------------信道部分--------------------------%

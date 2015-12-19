@@ -11,8 +11,9 @@ sim_param.chanMode = 'MIMO';             %信道模型 rayleigh, MIMO, LTEMIMO
 sim_param.interMode = 'spline';             %信道估计-内插方式 average,lagrange,spline
 sim_param.Eqmode   = 2;      %均衡方式[1,2] for ['ZF', 'MMSE']
 sim_param.snrdB       = 1;      %高斯白噪声
-sim_param.mapper_type=3;  % 导频插入位置 1[3 6 9 12] 2[2 6 9 13] 3[1 5 9 13] 4[2 6 10 14].
-sim_param.user_speed = 200/3.6;   %用户移动速度
+sim_param.mapper_type=1;  % 导频插入位置 1[3 6 9 12]  2[2 6 9 13]   3[1 5 9 13]  4[2 6 10 13].
+
+sim_param.user_speed = 280/3.6;   %用户移动速度
 %% 参数生成 - 由基本参数，或本项目议定参数，生成对应的仿真参数
 sim_param.turboRate            = 1/3; % Turbo码率
 sim_param.deltaF = 15e3;    %子载波间隔

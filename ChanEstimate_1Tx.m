@@ -13,7 +13,7 @@ for i=1:sim_param.Rx
         case 'lagrange'
             tmp=interpolate_lagrange(hp);
         case 'spline'
-            tmp=interpolate_spline(hp);            
+            tmp=interpolate_spline(hp, sim_param.mapper_type);            
     end    
     hD(:,:,i) = tmp;
 end
